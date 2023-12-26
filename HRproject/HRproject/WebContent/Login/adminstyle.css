@@ -1,0 +1,179 @@
+/* reset */
+body {
+	color: #243b55;
+}
+
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+	width: 100%;
+	font-size: 14px;
+}
+
+th, td {
+	padding: 6px 5px;
+}
+
+th {
+	height: 25px;
+	background: #243b55;
+	color: #fff;
+	text-align: center;
+}
+
+tr:first-child th:first-child {
+	border-top-left-radius: 6px;
+}
+
+tr:first-child th:last-child {
+	border-top-right-radius: 6px;
+}
+
+td {
+	font-weight: bold;
+	border-right: 1px solid #c6c9cc;
+	border-bottom: 1px solid #c6c9cc;
+}
+
+td:first-child {
+	border-left: 1px solid #c6c9cc;
+}
+
+tr:nth-child(even) td {
+	background: #eaeaed;
+}
+
+tr:last-child td:first-child {
+	border-bottom-left-radius: 6px;
+}
+
+tr:last-child td:last-child {
+	border-bottom-right-radius: 6px;
+}
+
+* {
+	padding: 0;
+	margin: 0
+}
+
+li {
+	list-style: none
+}
+
+a {
+	text-decoration: none;
+	font-size: 16px
+}
+
+/* header */
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
+}
+
+h1 {
+	margin: 10px;
+}
+
+.btn {
+	padding: 4px 8px;
+	background: #121D2A;
+	color: white;
+	border: 1px solid;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 16px
+}
+
+.btn:active{
+	background-color: #243b55;
+}
+
+.logout button {
+	padding: 8px 16px;
+	background: #121D2A;
+	color: white;
+	border: 1px solid;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+button:active {
+	background-color: #243b55;
+}
+
+/* menu */
+h1 {
+	margin: 10px;
+}
+
+.menu {
+	width: 100%;
+	overflow: hidden;
+	margin: 0 auto;
+	z-index: 1;
+}
+
+.menu>li {
+	width: 25%; /*20*5=100%*/
+	float: left;
+	text-align: center;
+	line-height: 40px;
+	background-color: #121D2A;
+}
+
+.menu a {
+	color: #fff;
+}
+
+.submenu>li {
+	line-height: 50px;
+	background-color: #121D2A;
+}
+
+.submenu {
+	height: 0; /*ul의 높이를 안보이게 처리*/
+	overflow: hidden;
+	position: absolute;
+	width: 25%;
+}
+
+/* hover */
+.menu>li:hover {
+	background-color: #243B55;
+	transition-duration: 0.5s;
+}
+
+.menu>li:hover .submenu {
+	height: 250px; /* 서브메뉴 li한개의 높이 50*5 */
+	transition-duration: 1s;
+	z-index: 3;
+}
+
+.menu .submenu>li:hover {
+	background-color: #243B55;
+	transition: background-color 0.5s ease;
+}
+
+/* result */
+.custom-styles {
+	position: absolute;
+	top: 160px;
+	width: 100%;
+	max-width: 100%;
+	text-align: center;
+}
+
+.custom-styles table {
+	table-layout: fixed;
+	border-collapse: separate;
+	width: 100%;
+}
+
+.custom-styles th, td {
+	overflow: hidden; /* 내용이 영역을 벗어날 경우 숨김 */
+	text-overflow: ellipsis; /* 내용이 영역을 벗어날 경우 ... 표시*/
+	white-space: nowrap; /* 텍스트 줄바뀜 안됨 */
+}
